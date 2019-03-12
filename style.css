@@ -1,0 +1,1495 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background-color: #fff;
+	background-image: url(img/sotsL.png), url(img/sotsR.png), url(img/bodyBG1.png);
+	background-position: top left, top right, center 700px;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-size: auto, auto, auto;
+	overflow-y: auto;
+}
+
+@font-face {
+	font-family: MuseoSansLight;
+	src: url(fonts/MuseoSansLight.ttf);
+}
+
+@font-face {
+	font-family: MuseoSansRegular;
+	src: url(fonts/MuseoSansRegular.ttf);
+}
+
+@font-face {
+	font-family: MuseoSansBlack;
+	src: url(fonts/MuseoSansBlack.ttf);
+}
+
+@font-face {
+	font-family: OpenSansBold;
+	src: url(fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+	font-family: OpenSansRegular;
+	src: url(fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: OpenSansExtraBold;
+	src: url(fonts/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+	font-family: GothaProLig;
+	src: url(fonts/GothaProLig.otf);
+}
+
+@font-face {
+	font-family: GothaProBol;
+	src: url(fonts/GothaProBol.otf);
+}
+
+.mainWrap{
+	position: relative;
+	float: left;
+	width: 100%;
+	background-image: url(img/bodyBG2.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	overflow: hidden;
+}
+
+.wrap{
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.work{
+	max-width: 1170px;
+	margin: auto;
+}
+
+.work.w1030{
+	max-width: 1030px;
+}
+
+.sf1{
+	position: absolute;
+	z-index: 3;
+	top: 140px !important;
+	left: 0px !important;
+	margin-left: 0px;
+	width: 161px;
+	height: 200px;
+	background-image: url(img/sf1.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.sf1_1{
+	position: absolute;
+	z-index: 3;
+	top: 480px !important;
+	left: 100% !important;
+	margin-left: -100px;
+	width: 128px;
+	height: 131px;
+	background-image: url(img/sf1_1.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.sf2{
+	position: absolute;
+	z-index: 3;
+	top: 160px !important;
+	left: 50% !important;
+	margin-left: -25px;
+	width: 60px;
+	height: 56px;
+	background-image: url(img/sf2.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.sf3{
+	position: absolute;
+	z-index: 3;
+	top: 80px !important;
+	left: 50% !important;
+	margin-left: -75px;
+	width: 24px;
+	height: 25px;
+	background-image: url(img/sf3.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/**************************** glass ***************************/
+.glassWin{
+	position: fixed;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.75);
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.imagesForSlider{
+	display: none;
+}
+
+.glassWin .closeGlass{
+	position: absolute;
+	top: -30px;
+	right: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url(img/closeGlass.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+
+body.glass .glassWin{
+	display: flex;
+}
+
+body.glass{
+	overflow: hidden;
+}
+
+.glassWin .winPopup{
+	position: relative;
+	float: left;
+	width: 1024px;
+	height: auto;
+	background: #fff;
+	margin-top: 50px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.glassWin .winPopup .imgSlider{
+	position: relative;
+	float: left;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.glassWin .winPopup .imgSlider *{
+	outline: none;
+}
+
+.glassWin .winPopup .imgSlider .slick-arrow{
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	font-size: 0px;
+	border: none;
+	cursor: pointer;
+	opacity: .2;
+	transition-duration: .5s;
+	transition-property: opacity;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.glassWin .winPopup .imgSlider .slick-arrow:hover{
+	opacity: .75;
+}
+
+.glassWin .winPopup .imgSlider .slick-arrow.slick-prev{
+	left: 0px;
+	background-image: url(img/slPrevb.png);
+}
+
+.glassWin .winPopup .imgSlider .slick-arrow.slick-next{
+	right: 0px;
+	background-image: url(img/slNextb.png);
+}
+
+.glassWin .winPopup .imgSlider img{
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	margin: 10px 0px;
+}
+
+.winPopup .titleW{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-family: MuseoSansRegular;
+	font-size: 30px;
+	line-height: 1.1em;
+}
+
+.winPopup .subtitleW{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-family: MuseoSansRegular;
+	color: #919191;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-top: 50px;
+}
+/**************************** glass ***************************/
+
+/**************************** Header ***************************/
+.headerSection{
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-top: 67px;
+}
+
+.headerSection .logo{
+	float: left;
+	width: 53px;
+	height: 61px;
+	background-image: url(img/logo.png);
+}
+
+.headerSection .title{
+	float: left;
+	height: 61px;
+	display: flex;
+	align-items: center;
+	color: #000;
+	font-size: 14px;
+	font-family: MuseoSansRegular;
+	line-height: 24px;
+	margin-left: 50px;
+}
+
+.rightHeader{
+	float: right;
+}
+
+.rightHeader .phoneInfo{
+	float: left;
+	height: 61px;
+	box-sizing: border-box;
+	border-bottom: 2px solid #e2e2e2;
+	text-align: center;
+}
+
+.rightHeader .phoneInfo .phoneT{
+	width: 100%;
+	display: inline-block;
+	color: #544f56;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: OpenSansBold;
+}
+
+.rightHeader .phoneInfo .titleT{
+	display: inline-block;
+	color: rgba(0,0,0,1);
+	font-size: 14px;
+	font-family: MuseoSansRegular;
+	margin-top: 14px;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+.rightHeader .phoneInfo .titleT:hover{
+	color: rgba(0,0,0,0.6);
+}
+
+.rightHeader .phone{
+	float: left;
+	height: 61px;
+	margin-left: 40px;
+}
+
+.rightHeader .phone .btnPhone{
+	float: left;
+	width: 30px;
+	height: 37px;
+	background: url(img/btnPhone.png);
+}
+/**************************** Header ***************************/
+/**************************** infoSection ***************************/
+.infoSection{
+	float: left;
+	width: 100%;
+	display: flex;
+}
+
+.infoSection{
+	float: left;
+	width: 100%;
+	display: flex;
+	margin-top: 40px;
+}
+
+.infoSection .leftInfo{
+	float: left;
+	width: 57%;
+	display: flex;
+	align-items: flex-end;
+}
+
+.infoSection .leftInfo .contentInfoS{
+	float: left;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.infoSection .leftInfo .text{
+	font-family: GothaProLig;
+	font-size: 36px;
+	line-height: 50px;
+	color: #e76a20;
+	margin-bottom: 70px;
+	background: linear-gradient(to right, #ff6000, #8194aa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.btnContainer{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: relative;
+	float: left;
+	width: 340px;
+}
+
+.infoSection .leftInfo .text span{
+	font-family: GothaProBol;
+}
+
+.infoSection .rightInfo{
+	float: left;
+	width: 43%;
+}
+
+.infoSection .rightInfo img{
+	max-width: 100%;
+	height: auto;
+}
+/**************************** infoSection ***************************/
+/**************************** AboutTextSection ***************************/
+.wrap.AboutTextSectionW{
+	position: relative;
+}
+
+.AboutTextSection{
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-top: 150px;
+	margin-bottom: 140px;
+	display: flex;
+}
+
+.wordsP {
+	position: absolute;
+	z-index: 0;
+	top: -100px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.wordsP .work{
+	height: 100%;
+}
+
+.wordsP .wordsPT{
+	float: left;
+	margin-left: 20px;
+	width: calc(100% - 40px);
+	height: 100%;
+	background-image: url(img/AboutTextSection.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+.AboutTextSection .AboutTextBlock{
+	position: relative;
+	z-index: 2;
+	float: left;
+	width: 33.333333333333333%;
+	background: #fff;
+	box-sizing: border-box;
+	padding: 40px 40px;
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.5);
+	box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.5);
+}
+
+.AboutTextSection .AboutTextBlock:nth-child(1){
+	margin-left: 35px;
+}
+
+.AboutTextSection .AboutTextBlock:nth-child(2){
+	margin: 0px 60px;
+}
+
+.AboutTextSection .AboutTextBlock::after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: -53px;
+	width: 53px;
+	height: 111px;
+	background-image: url(img/AboutTextBlockLabel.png);
+	margin-top: -55px;
+}
+
+.AboutTextSection .AboutTextBlock:nth-child(1)::after{
+	background-position: 0px 0px;
+}
+
+.AboutTextSection .AboutTextBlock:nth-child(2)::after{
+	background-position: 0px -111px;
+}
+
+.AboutTextSection .AboutTextBlock:nth-child(3)::after{
+	background-position: 0px -222px;
+}
+
+.AboutTextSection .AboutTextBlock:before{
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 4px;
+	height: 100%;
+	background: rgb(240,92,77); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(240,92,77,1) 0%, rgba(247,138,77,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(240,92,77,1) 0%,rgba(247,138,77,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(240,92,77,1) 0%,rgba(247,138,77,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f05c4d', endColorstr='#f78a4d',GradientType=0 ); /* IE6-9 */
+}
+
+.AboutTextSection .AboutTextBlock .title{
+	float: left;
+	width: 100%;
+	font-size: 16px;
+	font-family: MuseoSansBlack;
+	text-transform: uppercase;
+}
+
+.AboutTextSection .AboutTextBlock .text{
+	float: left;
+	width: 100%;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: MuseoSansRegular;
+	margin-top: 30px;
+}
+/**************************** AboutTextSection ***************************/
+/**************************** portfolio ***************************/
+.portfolioSection{
+	position: relative;
+	float: left;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 170px;
+}
+
+.portfolioSection .titlePortfolioSection{
+	position: absolute;
+	top: 15px;
+	left: 0px;
+	width: calc(50% - 15px);
+	color: #212c37;
+	font-size: 31px;
+	line-height: 42px;
+	font-family: GothaProLig;
+	box-sizing: border-box;
+	padding-left: 30px;
+	padding-top: 60px;
+}
+
+.portfolioSection .titlePortfolioSection::before{
+	content: '';
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	left: 0px;
+	width: 4px;
+	height: 100%;
+	background: url(img/sepPT.png) no-repeat top left;
+}
+
+.portfolioSection .titlePortfolioSection::after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	bottom: 0px;
+	left: 0px;
+	width: 4px;
+	height: 55%;
+	background: #f78b4d;
+}
+
+.auditBlock{
+	position: absolute;
+	bottom: 15px;
+	left: 0px;
+	width: calc(50% - 15px);
+	box-sizing: border-box;
+	padding-left: 30px;
+}
+
+.auditBlock.win{
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+	padding-left: 0px;
+	margin-top: 15px;
+}
+
+.portfolioSection .auditBlock::before{
+	content: '';
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	left: 0px;
+	width: 4px;
+	height: 100%;
+	max-height: 110px;
+	background: url(img/sepPT.png) no-repeat top left;
+	transform: rotate(180deg);
+	transform-origin: center center;
+}
+
+.portfolioSection .auditBlock::after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	width: 4px;
+	height: 55%;
+	max-height: 70px;
+	background: #f78b4d;
+}
+
+.auditBlock .title{
+	float: left;
+	width: 100%;
+	font-size: 20px;
+	line-height: 28px;
+	font-family: MuseoSansRegular;
+	color: #060606;
+}
+
+.auditBlock .titleEvent{
+	float: left;
+	width: 100%;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: MuseoSansRegular;
+	color: #919191;
+	text-transform: uppercase;
+	margin-top: 30px;
+	box-sizing: border-box;
+	padding-left: 25px;
+}
+
+.auditBlock .EventBlock{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 56px;
+	background-color: #e0e0e0;
+	border-radius: 50px;
+	border: 2px solid rgba(0,0,0,0.05);
+	margin-top: 15px;
+	-webkit-box-shadow: 0px 15px 30px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow: 0px 15px 30px 0px rgba(50, 50, 50, 0.3);
+	box-shadow: 0px 15px 30px 0px rgba(50, 50, 50, 0.3);
+	transition-property: background-color, background-image, background-position;
+	transition-duration: 0.5s;
+}
+
+.auditBlock.focus .EventBlock{
+	background-color: #fff;
+}
+
+.auditBlock.ready .EventBlock{
+	background-color: #fff;
+}
+
+.auditBlock .EventBlock::before{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	margin-top: -2px;
+	right: 25px;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #c5c5c5;
+	transition-property: background-color, opacity;
+	transition-duration: 0.5s;
+}
+
+.auditBlock .EventBlock::after{
+	content: '';
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	margin-top: -10px;
+	right: 15px;
+	width: 20px;
+	height: 20px;
+	background-image: url(img/iready.png);
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	opacity: 0;
+}
+
+.auditBlock.ready .EventBlock::after{
+	opacity: 1;
+}
+
+.auditBlock.ready .EventBlock::before{
+	opacity: 0;
+}
+
+.auditBlock.focus .EventBlock::before{
+	background-color: #3f96bf;
+}
+
+.auditBlock .EventBlock .phoneNumber{
+	position: relative;
+	z-index: 1;
+	float: left;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	padding: 0px 20px;
+	font-size: 18px;
+	color: #2b2b2b;
+	font-family: OpenSansRegular;
+	background-color: transparent;
+	-ms-user-select;
+	-moz-user-select;
+	-khtml-user-select;
+	-webkit-user-select;
+	user-select
+}
+
+.auditBlock .EventBlock .btnSendPhone{
+	position: absolute;
+	z-index: 4;
+	top: -2px;
+	right: -2px;
+	max-width: 45%;
+	height: calc(100% + 4px);
+	border: none;
+	outline: none;
+	padding: 0px 35px;
+	padding-right: 70px;
+	color: #fff;
+	font-size: 13px;
+	font-family: OpenSansExtraBold;
+	border-radius: 0px 50px 50px 0px;
+	letter-spacing: 2px;
+	transition: 0.5s;
+	background-size: 170% auto;
+	background-image: rgb(96,183,54); /* Old browsers */
+	background-image: -moz-linear-gradient(left, rgba(96,183,54,1) 0%, rgba(69,120,80,1) 100%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(left, rgba(96,183,54,1) 0%,rgba(69,120,80,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(to right, rgba(96,183,54,1) 0%,rgba(69,120,80,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60b736', endColorstr='#457850',GradientType=1 ); /* IE6-9 */
+	opacity: 0;
+	visibility: hidden;
+	transition-delay: 1s;
+	transition-duration: 0.5s;
+	transition-property: opacity;
+}
+
+.auditBlock.ready .EventBlock .btnSendPhone{
+	cursor: pointer;
+}
+
+.auditBlock.ready .EventBlock .btnSendPhone{
+	opacity: 1;
+	visibility: visible;
+}
+
+.auditBlock.readySend .EventBlock .btnSendPhone{
+	display: none;
+}
+
+.auditBlock .EventBlock .successBlock{
+	position: absolute;
+	z-index: 0;
+	opacity: 0;
+	top: 0px;
+	left: -3px;
+	width: calc(100% + 6px);
+	letter-spacing: 2px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 13px;
+	font-family: OpenSansExtraBold;
+	transition-duration: 1s;
+	transition-property: opacity, z-index;
+	border-radius: 50px;
+	background: rgb(96,183,54); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(96,183,54,1) 0%, rgba(69,120,80,1) 65%, rgba(69,120,80,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(96,183,54,1) 0%,rgba(69,120,80,1) 65%,rgba(69,120,80,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(96,183,54,1) 0%,rgba(69,120,80,1) 65%,rgba(69,120,80,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60b736', endColorstr='#457850',GradientType=1 ); /* IE6-9 */
+}
+
+.auditBlock .EventBlock .successBlock span{
+	position: relative;
+}
+
+.auditBlock .EventBlock .successBlock span::after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	margin-top: -10px;
+	right: -30px;
+	width: 20px;
+	height: 20px;
+	background-image: url(img/iready.png);
+	transition-property: opacity;
+	transition-duration: 0.5s;
+}
+
+.auditBlock.readySend .EventBlock .successBlock{
+	z-index: 5;
+	opacity: 1;
+}
+
+.auditBlock.readySend .EventBlock{
+	background-position: right center;
+	background-image: rgb(96,183,54); /* Old browsers */
+	background-image: -moz-linear-gradient(left, rgba(96,183,54,1) 0%, rgba(69,120,80,1) 100%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(left, rgba(96,183,54,1) 0%,rgba(69,120,80,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(to right, rgba(96,183,54,1) 0%,rgba(69,120,80,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60b736', endColorstr='#457850',GradientType=1 ); /* IE6-9 */
+}
+
+.auditBlock .EventBlock .btnSendPhone:hover{
+	background-position: right center;
+}
+
+.auditBlock .EventBlock .btnSendPhone::after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 37px;
+	width: 15px;
+	height: 13px;
+	margin-top: -6px;
+	background: url(img/btnSendPhone.png);
+}
+
+.auditBlock .EventBlock .phoneNumber::selection{
+	background: transparent;
+}
+
+.portfolioSection .PortfolioContainer{
+	float: left;
+	width: 50%;
+}
+
+.portfolioSection .PortfolioContainer.left{
+	margin-right: 15px;
+}
+
+.portfolioSection .PortfolioContainer.right{
+	margin-left: 15px;
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock{
+	position: relative;
+	float: left;
+	width: 100%;
+	padding-bottom: 100%;
+	margin: 15px 0px;
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.5);
+	box-shadow: 0px 4px 10px 0px rgba(50, 50, 50, 0.5);
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock .portfolioContent{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock .portfolioContent .content{
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 10%;
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock .portfolioContent .content .title{
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-size: 36px;
+	font-family: MuseoSansBlack;
+	text-transform: uppercase;
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock .portfolioContent .content .text{
+	float: left;
+	width: 100%;
+	margin-top: 15%;
+	color: #fff;
+	font-size: 16px;
+	font-family: MuseoSansRegular;
+	line-height: 20px;
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock .portfolioContent .content .link{
+	float: left;
+	width: 100%;
+	margin-top: 7%;
+	color: #fff;
+	font-size: 22px;
+	font-family: MuseoSansLight;
+	text-decoration: none;
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock.gbBG .portfolioContent .content{
+	background: -moz-linear-gradient(top, rgba(97,171,32,0.7) 0%, rgba(89,34,34,0.7) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(97,171,32,0.7) 0%,rgba(89,34,34,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(97,171,32,0.7) 0%,rgba(89,34,34,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b361ab20', endColorstr='#b3592222',GradientType=0 ); /* IE6-9 */
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock.poBG .portfolioContent .content{
+	background: -moz-linear-gradient(top, rgba(240,92,77,0.7) 0%, rgba(247,138,77,0.7) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(240,92,77,0.7) 0%,rgba(247,138,77,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(240,92,77,0.7) 0%,rgba(247,138,77,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3f05c4d', endColorstr='#b3f78a4d',GradientType=0 ); /* IE6-9 */
+}
+
+.portfolioSection .PortfolioContainer .PortfolioBlock.bbBG .portfolioContent .content{
+	background: -moz-linear-gradient(left, rgba(32,24,37,0.7) 0%, rgba(33,8,60,0.7) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(32,24,37,0.7) 0%,rgba(33,8,60,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(32,24,37,0.7) 0%,rgba(33,8,60,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3201825', endColorstr='#b321083c',GradientType=1 ); /* IE6-9 */
+}
+/**************************** portfolio ***************************/
+/**************************** ToCalcSection ***************************/
+.ToCalcSection{
+	position: relative;
+	float: left;
+	width: 100%;
+	margin-bottom: 360px;
+	display: flex;
+	justify-content: center;
+}
+
+.pulseBtn{
+	position: absolute;
+	z-index: 2;
+	width: 340px;
+	height: 64px;
+	top: 0px;
+	background: transparent;
+	border-radius: 150px;
+	border: 1px solid #ef5c4d;
+	animation: pulse 2s linear infinite;
+}
+
+.pulseBtnShadow{
+	position: absolute;
+	z-index: 1;
+	width: 340px;
+	height: 64px;
+	top: 0px;
+	background: rgba(243,116,77,0.2);
+	border-radius: 150px;
+	animation: pulseShadow 2s linear infinite;
+	transform-origin: center center;
+}
+
+@-webkit-keyframes pulseShadow{
+
+	0%{
+		transform: scaleX(1);
+	}
+
+	50%{
+		transform: scaleX(1.11);
+		height: 104px;
+		top: -20px;
+	}
+
+	100%{
+		transform: scaleX(1);
+	}
+
+}
+
+@-webkit-keyframes pulse{
+
+	0%{
+		transform: scaleX(1);
+		opacity: 0;
+	}
+
+	14%{
+		transform: scaleX(1.11);
+		height: 104px;
+		top: -20px;
+		opacity: 0;
+	}
+
+	15%{
+		transform: scaleX(1.11);
+		height: 104px;
+		top: -20px;
+		opacity: 1;
+	}
+
+	30%{
+		transform: scaleX(1.11);
+		height: 104px;
+		top: -20px;
+		opacity: 1;
+	}
+
+	31%{
+		transform: scaleX(1.11);
+		height: 104px;
+		top: -20px;
+		opacity: 1;
+	}
+
+	70%{
+		transform: scaleX(1.22);
+		height: 144px;
+		top: -40px;
+		opacity: 0.25;
+	}
+
+	100%{
+		transform: scaleX(1.22);
+		height: 144px;
+		top: -40px;
+		opacity: 0;
+	}
+
+}
+
+.ToCalcSection .btnCalc,
+.infoSection .leftInfo .btnTest{
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	max-width: 340px;
+	height: 64px;
+	font-family: OpenSansExtraBold;
+	font-size: 13px;
+	text-align: center;
+	text-transform: uppercase;
+	border: none;
+	transition: 0.5s;
+	background-image: rgb(239,94,80); /* Old browsers */
+	background-image: -moz-linear-gradient(left, rgba(239,94,80,1) 0%, rgba(247,139,77,1) 40%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(left, rgba(239,94,80,1) 0%,rgba(247,139,77,1) 40%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(to right, rgba(239,94,80,1) 0%,rgba(247,139,77,1) 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef5e50', endColorstr='#f78b4d',GradientType=1 ); /* IE6-9 */
+	background-size: 200% auto;
+	color: #fff;
+	border-radius: 50px;
+	cursor: pointer;
+	outline: none;
+}
+
+.ToCalcSection .btnCalc span,
+.infoSection .leftInfo .btnTest span{
+	position: relative;
+	padding-right: 30px;
+}
+
+.ToCalcSection .btnCalc span::after,
+.infoSection .leftInfo .btnTest span::after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	right: 0px;
+	width: 20px;
+	height: 20px;
+	background-image: url(svg/arrow.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.ToCalcSection .btnCalc:hover,
+.infoSection .leftInfo .btnTest:hover{
+	background-position: right center;
+}
+/**************************** ToCalcSection ***************************/
+
+@media only screen and (max-width: 1500px){
+	.sf1{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1260px){
+	.btnContainer{
+		margin-left: 40px;
+	}
+
+	.glassWin .winPopup{
+		width: calc(85% - 20px);
+	}
+
+	.glassWin .winPopup .imgSlider{
+		width: calc(100% - 10px);
+		height: calc(100% - 10px);
+	}
+
+	.glassWin .winPopup .imgSlider img{
+		margin: 5px 0px;
+	}
+}
+
+@media only screen and (max-width: 1200px){
+	body{
+		background-size: 35%, 35%, auto;
+	}
+
+	.infoSection .leftInfo{
+		box-sizing: border-box;
+		padding-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 1199px){
+	.sf1_1,
+	.sf2,
+	.sf3{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1170px){
+	.wrap{
+		box-sizing: border-box;
+		padding: 0px 10px;
+	}
+}
+
+@media only screen and (max-width: 1023px){
+	body{
+		background-image: url(img/sotsL.png), url(img/sotsR.png);
+		background-position: top left, top right;
+		background-repeat: no-repeat, no-repeat;
+	}
+}
+
+@media only screen and (max-width: 900px){
+	.headerSection .title{
+		margin-left: 20px;
+	}
+	.infoSection .leftInfo .text{
+		font-size: 26px;
+		line-height: 36px;
+	}
+	.AboutTextSection .AboutTextBlock{
+		padding: 20px;
+	}
+
+	.portfolioSection .titlePortfolioSection{
+		padding-top: 0px;
+	}
+
+	.auditBlock .title{
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.auditBlock .titleEvent{
+		margin-top: 15px;
+	}
+
+	.auditBlock .EventBlock .btnSendPhone{
+		letter-spacing: 0px;
+		padding: 0px 15px;
+		padding-right: 40px;
+	}
+
+	.auditBlock .EventBlock .btnSendPhone::after{
+		right: 15px;
+	}
+
+	.AboutTextSection{
+		margin: 80px 0px;
+	}
+
+	.portfolioSection{
+		margin-bottom: 80px;
+	}
+
+	.ToCalcSection{
+		margin-bottom: 200px;
+	}
+
+	.wordsP{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 760px){
+	.infoSection{
+		flex-wrap: wrap;
+	}
+
+	.infoSection .leftInfo{
+		width: 100%;
+		padding-right: 0px;
+	}
+
+	.infoSection .leftInfo .contentInfoS{
+		justify-content: center;
+	}
+
+	.infoSection .leftInfo .text{
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.infoSection .rightInfo{
+		width: 100%;
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.AboutTextSection{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.AboutTextSection .AboutTextBlock{
+		width: 100%;
+		max-width: 480px;
+		margin: 30px 0px !important;
+		margin-left: 30px !important;
+	}
+
+	.AboutTextSection .AboutTextBlock br{
+		display: none;
+	}
+
+	.AboutTextSection .AboutTextBlock:nth-child(1){
+		margin-top: 0px !important;
+	}
+
+	.portfolioSection{
+		flex-wrap: wrap;
+		padding-top: 100px;
+		padding-bottom: 180px;
+	}
+
+	.portfolioSection .PortfolioContainer{
+		width: 100%;
+		margin: 0px !important;
+	}
+
+	.portfolioSection .titlePortfolioSection{
+		width: 100%;
+		top: 0px;
+	}
+
+	.auditBlock{
+		width: 100%;
+		bottom: 0px;
+	}
+
+	.work.w1030{
+		max-width: 500px;
+	}
+
+	.portfolioSection .titlePortfolioSection{
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.btnContainer{
+		margin-left: 0px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	.auditBlock .EventBlock{
+		margin-left: -15px;
+	}
+
+
+	.auditBlock.win .EventBlock{
+		margin-left: 0px;
+	}
+}
+
+@media only screen and (max-width: 730px){
+	.rightHeader{
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.headerSection .title{
+		width: 260px;
+		line-height: 1.2em;
+	}
+
+	.headerSection .title br{
+		display: none;
+	}
+
+	.headerSection{
+		margin-top: 40px;
+	}
+
+	.rightHeader .phone{
+		margin-left: 15px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.rightHeader .phoneInfo .phoneT{
+		font-size: 16px;
+	}
+	.rightHeader .phoneInfo .titleT{
+		font-size: 12px;
+	}
+
+	.headerSection .title{
+		width: 210px;
+	}
+
+	.winPopup .titleW{
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 520px){
+	.rightHeader .phone{
+		display: none;
+	}
+
+	.ToCalcSection .btnCalc,
+	.infoSection .leftInfo .btnTest{
+		font-size: 11px;
+	}
+
+	.ToCalcSection .btnCalc span::after,
+	.infoSection .leftInfo .btnTest span::after{
+		width: 16px;
+	}
+
+	.ToCalcSection .btnCalc span,
+	.infoSection .leftInfo .btnTest span{
+		padding-right: 25px;
+	}
+}
+
+@media only screen and (max-width: 480px){
+
+	.winPopup .titleW{
+		font-size: 18px;
+	}
+
+	.ToCalcSection .btnCalc, .infoSection .leftInfo .btnTest{
+		max-width: 240px;
+	}
+
+	.auditBlock .EventBlock .phoneNumber{
+		font-size: 15px;
+	}
+	.auditBlock .EventBlock .btnSendPhone{
+		font-size: 12px;
+	}
+
+
+	.pulseBtn{
+		width: 270px;
+	}
+
+	.pulseBtnShadow{
+		width: 240px;
+	}
+
+	.btnContainer{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.mainWrap{
+		overflow: hidden;
+	}
+
+	@-webkit-keyframes pulse{
+
+		0%{
+			transform: scaleX(1);
+			opacity: 0;
+		}
+
+		14%{
+			transform: scaleX(1);
+			height: 104px;
+			top: -20px;
+			opacity: 0;
+		}
+
+		15%{
+			transform: scaleX(1);
+			height: 104px;
+			top: -20px;
+			opacity: 1;
+		}
+
+		30%{
+			transform: scaleX(1);
+			height: 104px;
+			top: -20px;
+			opacity: 1;
+		}
+
+		31%{
+			transform: scaleX(1);
+			height: 104px;
+			top: -20px;
+			opacity: 1;
+		}
+
+		70%{
+			transform: scaleX(1.1);
+			height: 124px;
+			top: -30px;
+			opacity: 0.25;
+		}
+
+		100%{
+			transform: scaleX(1.1);
+			height: 134px;
+			top: -30px;
+			opacity: 0;
+		}
+
+	}
+}
+
+@media only screen and (max-width: 470px){
+	.rightHeader{
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.rightHeader .phone{
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 430px){
+	.headerSection .title{
+		display: inline-block;
+		width: calc(100% - 80px);
+		line-height: 1.3em;
+	}
+	.headerSection .title br{
+		display: none;
+	}
+	.rightHeader{
+		margin-top: 25px;
+	}
+
+	.infoSection .rightInfo{
+		display: block;
+	}
+
+	.portfolioSection .PortfolioContainer .PortfolioBlock .portfolioContent .content .title{
+		font-size: 28px;
+	}
+
+	.auditBlock{
+		padding-left: 15px;
+	}
+
+	.AboutTextSection .AboutTextBlock br{
+		display: block;
+	}
+
+	.auditBlock .EventBlock{
+		margin-left: -10px;
+	}
+
+	.portfolioSection .auditBlock::before{
+		height: 50%;
+	}
+
+	.portfolioSection .auditBlock::after{
+		height: 25%;
+	}
+
+	.infoSection .leftInfo .text br{
+		display: none;
+	}
+}
